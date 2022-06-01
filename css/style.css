@@ -82,6 +82,13 @@ a {
 	padding: 4px 0;
 }
 
+#time {
+	color: #fff;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+	font-size: 18px;
+}
+
 .navigation {
 	padding: 0;
 }
