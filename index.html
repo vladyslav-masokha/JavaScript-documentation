@@ -43,13 +43,12 @@
 									>
 									<a href="#methods-array" class="nav-link">Array methods</a>
 									<a href="#methods-object" class="nav-link">Object methods</a>
-									<a href="#function-declaration" class="nav-link"
-										>Function declaration</a
-									>
-									<a href="#arrow-function" class="nav-link">Arrow function</a>
+									<a href="#functions" class="nav-link">Functions</a>
+									<a href="#dom-elem" class="nav-link">DOM elements</a>
 									<a
 										href="https://zesty-tartufo-cf126f.netlify.app/"
 										class="nav-link jsknow"
+										target='_blank'
 										>JavaScript (know)</a
 									>
 								</nav>
@@ -225,7 +224,7 @@
 						<div id="arrow-function">
 							<!-- ! Title -->
 							<div class="function-title">
-								<h1>Function declaration</h1>
+								<h1>Arrow function</h1>
 								<p>
 									An arrow function expression is a compact alternative to a
 									traditional function expression, but is limited and can't be
@@ -316,7 +315,7 @@
 												>;</span
 											>
 											<br />
-											<span class="token punctuation">}</span>
+											<span class="token punctuation" id="dom-elem">}</span>
 										</code>
 									</div>
 								</div>
@@ -329,12 +328,134 @@
 			<!-- ! DOM elements -->
 			<section id="dom-elements">
 				<div class="wrapper">
-					<div class="dom-elements-inner">
-
+					<div id="dom-elements-inner">
 						<div class="dom-elements-title">
-
+							<h1>DOM elements</h1>
+							<p>
+								The DOM is the way Javascript sees its containing pages' data.
+								It is an object that includes how the HTML/XHTML/XML is
+								formatted, as well as the browser state. A DOM element is
+								something like a DIV, HTML, BODY element on a page. You can add
+								classes to all of these using CSS, or interact with them using
+								JS.
+							</p>
 						</div>
+						<div class="dom-elements-content">
+							<!-- ! Prepend -->
+							<div class="prepend-element">
+								<h1>Element.prepend()</h1>
+								<p>
+									The Element.prepend() method inserts a set of Node objects or
+									string objects before the first child of the Element. String
+									objects are inserted as equivalent Text nodes.
+								</p>
+								<h3>Syntax:</h3>
+								<div>
+									<code>
+										<span class="token function">prepend</span
+										><span class="token punctuation">(</span>param1<span
+											class="token punctuation"
+											>)</span
+										>
+										<br />
+										<span class="token function">prepend</span
+										><span class="token punctuation">(</span>param1<span
+											class="token punctuation"
+											>,</span
+										>
+										param2<span class="token punctuation">)</span>
+										<br />
+										<span class="token function">prepend</span
+										><span class="token punctuation">(</span>param1<span
+											class="token punctuation"
+											>,</span
+										>
+										param2<span class="token punctuation">,</span>
+										<span class="token comment">/* ... ,*/</span> paramN<span
+											class="token punctuation"
+											>)</span
+										>
+									</code>
+								</div>
+							</div>
+							<!-- ! Append -->
+							<div class="append-element">
+								<h1>Element.append()</h1>
+								<p>
+									The Element.append() method inserts a set of Node objects or
+									string objects after the last child of the Element. String
+									objects are inserted as equivalent Text nodes.
+								</p>
+								<ul>
+									<li>
+										<span>Element.append()</span> allows you to also append
+										string objects, whereas Node.appendChild() only accepts Node
+										objects.
+									</li>
+									<li>
+										<span>Element.append()</span> has no return value, whereas
+										Node.appendChild() returns the appended Node object.
+									</li>
+									<li>
+										<span>Element.append()</span> can append several nodes and
+										strings, whereas Node.appendChild() can only append one
+										node.
+									</li>
+								</ul>
+								<h3>Syntax:</h3>
+								<div>
+									<code
+										><span class="token function">prepend</span
+										><span class="token punctuation">(</span>param1<span
+											class="token punctuation"
+											>)</span
+										>
+										<br />
+										<span class="token function">prepend</span
+										><span class="token punctuation">(</span>param1<span
+											class="token punctuation"
+											>,</span
+										>
+										param2<span class="token punctuation">)</span>
+										<br />
+										<span class="token function">prepend</span
+										><span class="token punctuation">(</span>param1<span
+											class="token punctuation"
+											>,</span
+										>
+										param2<span class="token punctuation">,</span>
+										<span class="token comment">/* ... ,*/</span> paramN<span
+											class="token punctuation"
+											>)</span
+										>
+									</code>
+								</div>
+							</div>
+							<!-- ! OuterHTML -->
+							<div class="outer-html">
+								<h1>Element.outerHTML</h1>
+								<p>
+									The outerHTML attribute of the Element DOM interface gets the
+									serialized HTML fragment describing the element including its
+									descendants. It can also be set to replace the element with
+									nodes parsed from the given string.
+								</p>
+								<p>
+									To only obtain the HTML representation of the contents of an
+									element, or to replace the contents of an element, use the
+									innerHTML property instead.
+								</p>
 
+								<h3>Value:</h3>
+								<p>
+									Reading the value of outerHTML returns a string containing an
+									HTML serialization of the element and its descendants. Setting
+									the value of outerHTML replaces the element and all of its
+									descendants with a new DOM tree constructed by parsing the
+									specified htmlString.
+								</p>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>

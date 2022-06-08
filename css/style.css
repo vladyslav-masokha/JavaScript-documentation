@@ -63,7 +63,7 @@ a {
   font-weight: 700;
   font-size: 24px;
 }
-.logo span {
+.logo .logo-words {
   color: #24a3ff;
 }
 .logo a {
@@ -75,6 +75,9 @@ a {
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   padding: 4px 0;
+}
+.logo span {
+  color: #ff5c5c;
 }
 
 .navigation {
@@ -192,6 +195,9 @@ a {
   color: #ffe86a;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+}
+.nav .jsknow {
+  color: #ff5c5c;
 }
 
 .nav-link {
@@ -327,9 +333,11 @@ a {
   margin-top: 100px;
 }
 
+.function-title {
+  text-align: center;
+}
 .function-title h1 {
   color: #49ffaf;
-  text-align: center;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 30px;
@@ -375,6 +383,10 @@ code {
   color: #9e9e9e;
 }
 
+.token.comment {
+  color: #9e9e9e;
+}
+
 .function-declaration-description {
   margin-top: 30px;
 }
@@ -400,6 +412,85 @@ code {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 18px;
+}
+
+#dom-elements {
+  margin-top: 50px;
+}
+
+.dom-elements-title {
+  text-align: center;
+}
+.dom-elements-title h1 {
+  color: red;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+}
+.dom-elements-title p {
+  color: #eee;
+  margin-top: 30px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.prepend-element,
+.append-element,
+.outer-html {
+  margin: 10px 0;
+}
+.prepend-element h1,
+.append-element h1,
+.outer-html h1 {
+  text-align: center;
+  color: #8279ff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+}
+.prepend-element p,
+.append-element p,
+.outer-html p {
+  color: #eee;
+  margin-top: 30px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+}
+.prepend-element h3,
+.append-element h3,
+.outer-html h3 {
+  margin: 10px 0;
+  text-align: center;
+  color: #fea150;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+}
+.prepend-element div,
+.append-element div,
+.outer-html div {
+  background: #f2f1f1;
+  border-radius: 5px;
+  padding: 10px;
+}
+.prepend-element ul,
+.append-element ul,
+.outer-html ul {
+  text-align: center;
+  margin: 10px 15px;
+  list-style: square;
+  color: #acdeff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+}
+.prepend-element ul span,
+.append-element ul span,
+.outer-html ul span {
+  color: #d30038;
 }
 
 #footer {
