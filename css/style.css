@@ -2,12 +2,10 @@
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
-
 *::before {
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
-
 *::after {
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
@@ -66,7 +64,7 @@ a {
 	font-size: 24px;
 }
 
-.logo span {
+.logo span.logo-words {
 	color: #24a3ff;
 }
 
@@ -82,17 +80,13 @@ a {
 	padding: 4px 0;
 }
 
-#time {
-	color: #fff;
-	font-family: 'Montserrat', sans-serif;
-	font-weight: 700;
-	font-size: 18px;
+.logo span {
+	color: #ff5c5c;
 }
 
 .navigation {
 	padding: 0;
 }
-
 .navigation:active {
 	background: #95959c;
 	border-radius: 8px;
@@ -107,7 +101,6 @@ a {
 	cursor: pointer;
 	z-index: 2;
 }
-
 .burger span {
 	display: block;
 	width: 22px;
@@ -120,19 +113,15 @@ a {
 	transition: all 0.3s linear;
 	opacity: 1;
 }
-
 .burger span:first-child {
 	top: 6px;
 }
-
 .burger span:nth-child(2) {
 	top: 14px;
 }
-
 .burger span:nth-child(3) {
 	top: 14px;
 }
-
 .burger span:last-child {
 	top: 22px;
 }
@@ -145,27 +134,22 @@ a {
 	z-index: 3;
 	cursor: pointer;
 }
-
 .check-burger:checked + .burger span:first-child {
 	top: -10px;
 	opacity: 0;
 }
-
 .check-burger:checked + .burger span:nth-child(2) {
 	-webkit-transform: rotate(45deg);
 	transform: rotate(45deg);
 }
-
 .check-burger:checked + .burger span:nth-child(3) {
 	-webkit-transform: rotate(-45deg);
 	transform: rotate(-45deg);
 }
-
 .check-burger:checked + .burger span:last-child {
 	top: 60px;
 	opacity: 0;
 }
-
 .check-burger:checked + .burger + .nav {
 	-webkit-transform: translate(0, 0);
 	transform: translate(0, 0);
@@ -199,7 +183,6 @@ a {
 	-webkit-transition: all 0.3s linear;
 	transition: all 0.3s linear;
 }
-
 .nav a {
 	text-decoration: none;
 	background: #263540;
@@ -207,21 +190,15 @@ a {
 	width: 100%;
 	text-align: center;
 }
-
 .nav a:active {
 	background: #e6e6f0;
 	-webkit-transition: all 0.3s ease;
 	transition: all 0.3s ease;
 }
-
 .nav a:hover:not(.nav-active-link) {
 	color: #ffe86a;
 	-webkit-transition: all 0.5s ease-in-out;
 	transition: all 0.5s ease-in-out;
-}
-
-.nav .error {
-	color: #ff0000;
 }
 
 .nav-link {
@@ -231,6 +208,10 @@ a {
 	line-height: 29px;
 	color: #289e7c;
 	padding: 7px 0;
+}
+
+a.jsknow {
+	color: #ff5c5c;
 }
 
 .nav-active-link {
@@ -264,7 +245,6 @@ a {
 	font-weight: 700;
 	font-size: 30px;
 }
-
 .array-methods-title h3 {
 	color: #f5ffb9;
 	text-align: center;
@@ -272,7 +252,6 @@ a {
 	font-weight: 700;
 	font-size: 24px;
 }
-
 .array-methods-title p {
 	color: #eee;
 	margin-top: 30px;
@@ -280,7 +259,6 @@ a {
 	font-weight: 700;
 	font-size: 16px;
 }
-
 .array-methods-title p a {
 	color: #009aff;
 }
@@ -289,18 +267,15 @@ a {
 	text-align: center;
 	margin-top: 30px;
 }
-
 .array-methods-list h2 {
 	color: #49ffaf;
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 700;
 	font-size: 24px;
 }
-
 .array-methods-list ul {
 	margin: 30px 0;
 }
-
 .array-methods-list ul li {
 	color: #8279ff;
 	padding-top: 10px;
@@ -320,7 +295,6 @@ a {
 	font-weight: 700;
 	font-size: 30px;
 }
-
 .object-methods-title h3 {
 	color: #f5ffb9;
 	text-align: center;
@@ -328,7 +302,6 @@ a {
 	font-weight: 700;
 	font-size: 24px;
 }
-
 .object-methods-title p {
 	color: #eee;
 	margin-top: 30px;
@@ -336,7 +309,6 @@ a {
 	font-weight: 700;
 	font-size: 16px;
 }
-
 .object-methods-title p a {
 	color: #009aff;
 }
@@ -345,18 +317,15 @@ a {
 	text-align: center;
 	margin-top: 30px;
 }
-
 .object-methods-list h2 {
 	color: #49ffaf;
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 700;
 	font-size: 24px;
 }
-
 .object-methods-list ul {
 	margin: 30px 0;
 }
-
 .object-methods-list ul li {
 	color: #8279ff;
 	padding-top: 10px;
@@ -376,7 +345,6 @@ a {
 	font-weight: 700;
 	font-size: 30px;
 }
-
 .function-title h3 {
 	margin: 10px 0;
 	color: #fea150;
@@ -384,7 +352,6 @@ a {
 	font-weight: 700;
 	font-size: 24px;
 }
-
 .function-title p {
 	color: #eee;
 	margin-top: 30px;
@@ -422,11 +389,9 @@ code {
 .function-declaration-description {
 	margin-top: 30px;
 }
-
 .function-declaration-description p {
 	color: #ec6f5d;
 }
-
 .function-declaration-description p span {
 	color: #8279ff;
 }
@@ -440,37 +405,9 @@ code {
 	border-radius: 5px;
 	padding: 10px;
 }
-
 .arrow-function-example h2 {
 	color: #50eafe;
 	margin: 20px 0;
-	font-family: 'Montserrat', sans-serif;
-	font-weight: 700;
-	font-size: 18px;
-}
-
-/* ! Footer */
-#footer {
-	margin-top: auto;
-	background: #00243e;
-}
-
-/* TODO: COPYRIGHT */
-.copyright {
-	color: #fff;
-	padding: 10px;
-	text-align: center;
-}
-
-.copyright span {
-	color: #8279ff;
-	font-family: 'Montserrat', sans-serif;
-	font-weight: 700;
-	font-size: 18px;
-}
-
-.copyright p span {
-	color: #ff5c5c;
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 700;
 	font-size: 18px;
