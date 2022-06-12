@@ -489,10 +489,25 @@ code {
 	}
 }
 
-// ! Prepend
+// ! Prepend / append / outerHtml / querySelector / querySelectorAll / getElementById
+// ! getElementsByTagName / getElementsByClassName / innerHTML / createElement
+// ! createTextNode / classList (add() / remove() / replace() / toggle()
+// !
 .prepend-element,
 .append-element,
-.outer-html {
+.outer-html,
+.query-selector,
+.query-selector-all,
+.get-element-by-id,
+.get-elements-by-tag-name,
+.get-elements-by-class-name,
+.inner-html,
+.create-element,
+.create-text-node,
+.class-list,
+.insert-adjacent-element,
+.insert-adjacent-html,
+.insert-adjacent-text {
 	margin: 10px 0;
 	h1 {
 		text-align: center;
@@ -500,7 +515,7 @@ code {
 		font: {
 			family: 'Montserrat', sans-serif;
 			weight: 700;
-			size: 24px;
+			size: 20px;
 		}
 	}
 

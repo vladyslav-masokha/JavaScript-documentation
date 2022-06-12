@@ -437,21 +437,57 @@ code {
 
 .prepend-element,
 .append-element,
-.outer-html {
+.outer-html,
+.query-selector,
+.query-selector-all,
+.get-element-by-id,
+.get-elements-by-tag-name,
+.get-elements-by-class-name,
+.inner-html,
+.create-element,
+.create-text-node,
+.class-list,
+.insert-adjacent-element,
+.insert-adjacent-html,
+.insert-adjacent-text {
   margin: 10px 0;
 }
 .prepend-element h1,
 .append-element h1,
-.outer-html h1 {
+.outer-html h1,
+.query-selector h1,
+.query-selector-all h1,
+.get-element-by-id h1,
+.get-elements-by-tag-name h1,
+.get-elements-by-class-name h1,
+.inner-html h1,
+.create-element h1,
+.create-text-node h1,
+.class-list h1,
+.insert-adjacent-element h1,
+.insert-adjacent-html h1,
+.insert-adjacent-text h1 {
   text-align: center;
   color: #8279ff;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 20px;
 }
 .prepend-element p,
 .append-element p,
-.outer-html p {
+.outer-html p,
+.query-selector p,
+.query-selector-all p,
+.get-element-by-id p,
+.get-elements-by-tag-name p,
+.get-elements-by-class-name p,
+.inner-html p,
+.create-element p,
+.create-text-node p,
+.class-list p,
+.insert-adjacent-element p,
+.insert-adjacent-html p,
+.insert-adjacent-text p {
   color: #eee;
   margin-top: 30px;
   text-align: center;
@@ -461,7 +497,19 @@ code {
 }
 .prepend-element h3,
 .append-element h3,
-.outer-html h3 {
+.outer-html h3,
+.query-selector h3,
+.query-selector-all h3,
+.get-element-by-id h3,
+.get-elements-by-tag-name h3,
+.get-elements-by-class-name h3,
+.inner-html h3,
+.create-element h3,
+.create-text-node h3,
+.class-list h3,
+.insert-adjacent-element h3,
+.insert-adjacent-html h3,
+.insert-adjacent-text h3 {
   margin: 10px 0;
   text-align: center;
   color: #fea150;
@@ -471,14 +519,38 @@ code {
 }
 .prepend-element div,
 .append-element div,
-.outer-html div {
+.outer-html div,
+.query-selector div,
+.query-selector-all div,
+.get-element-by-id div,
+.get-elements-by-tag-name div,
+.get-elements-by-class-name div,
+.inner-html div,
+.create-element div,
+.create-text-node div,
+.class-list div,
+.insert-adjacent-element div,
+.insert-adjacent-html div,
+.insert-adjacent-text div {
   background: #f2f1f1;
   border-radius: 5px;
   padding: 10px;
 }
 .prepend-element ul,
 .append-element ul,
-.outer-html ul {
+.outer-html ul,
+.query-selector ul,
+.query-selector-all ul,
+.get-element-by-id ul,
+.get-elements-by-tag-name ul,
+.get-elements-by-class-name ul,
+.inner-html ul,
+.create-element ul,
+.create-text-node ul,
+.class-list ul,
+.insert-adjacent-element ul,
+.insert-adjacent-html ul,
+.insert-adjacent-text ul {
   text-align: center;
   margin: 10px 15px;
   list-style: square;
@@ -489,7 +561,19 @@ code {
 }
 .prepend-element ul span,
 .append-element ul span,
-.outer-html ul span {
+.outer-html ul span,
+.query-selector ul span,
+.query-selector-all ul span,
+.get-element-by-id ul span,
+.get-elements-by-tag-name ul span,
+.get-elements-by-class-name ul span,
+.inner-html ul span,
+.create-element ul span,
+.create-text-node ul span,
+.class-list ul span,
+.insert-adjacent-element ul span,
+.insert-adjacent-html ul span,
+.insert-adjacent-text ul span {
   color: #d30038;
 }
 

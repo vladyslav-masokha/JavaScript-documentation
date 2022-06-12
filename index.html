@@ -48,7 +48,7 @@
 									<a
 										href="https://zesty-tartufo-cf126f.netlify.app/"
 										class="nav-link jsknow"
-										target='_blank'
+										target="_blank"
 										>JavaScript (know)</a
 									>
 								</nav>
@@ -454,6 +454,137 @@
 									descendants with a new DOM tree constructed by parsing the
 									specified htmlString.
 								</p>
+							</div>
+							<!-- ! querySelector -->
+							<div class="query-selector">
+								<h1>.querySelector()</h1>
+								<p>
+									Returns the first matching Element node within the node's
+									subtree. If no matching node is found, null is returned.
+								</p>
+							</div>
+							<!-- ! querySelectorAll -->
+							<div class="query-selector-all">
+								<h1>.querySelectorAll()</h1>
+								<p>
+									Returns a NodeList containing all matching Element nodes
+									within the node's subtree, or an empty NodeList if no matches
+									are found.
+								</p>
+							</div>
+							<!-- ! getElementById -->
+							<div class="get-element-by-id">
+								<h1>.getElementById()</h1>
+								<p>
+									The Document method getElementById() returns an Element object
+									representing the element whose id property matches the
+									specified string. Since element IDs are required to be unique
+									if specified, they're a useful way to get access to a specific
+									element quickly.
+								</p>
+								<h3>Syntax:</h3>
+								<div>
+									<code
+										><span class="token function">getElementById</span
+										><span class="token punctuation">(</span>id<span
+											class="token punctuation"
+											>)</span
+										>
+									</code>
+								</div>
+							</div>
+
+							<!-- ! getElementsByTagName -->
+							<div class="get-elements-by-tag-name">
+								<h1>.getElementsByTagName()</h1>
+								<p>The Element.getElementsByTagName() method returns a live HTMLCollection of elements with the given tag name.</p>
+								<p>All descendants of the specified element are searched, but not the element itself. The returned list is live, which means it updates itself with the DOM tree automatically. Therefore, there is no need to call Element.getElementsByTagName() with the same element and arguments repeatedly if the DOM changes in between calls.</p>
+								<p>When called on an HTML element in an HTML document, getElementsByTagName lower-cases the argument before searching for it. This is undesirable when trying to match camel-cased SVG elements (such as <linearGradient>) in an HTML document. Instead, use Element.getElementsByTagNameNS(), which preserves the capitalization of the tag name.</p>
+								<p>lement.getElementsByTagName is similar to Document.getElementsByTagName(), except that it only searches for elements that are descendants of the specified element.</p>
+								<h3>Syntax</h3>
+								<div>
+									<code><span class="token function">getElementsByTagName</span><span class="token punctuation">(</span>tagName<span class="token punctuation">)</span></code>
+								</div>
+							</div>
+
+							<!-- ! getElementsByClassName -->
+							<div class="get-elements-by-class-name">
+								<h1>.getElementsByClassName()</h1>
+								<p>The getElementsByClassName method of Document interface returns an array-like object of all child elements which have all of the given class name(s).</p>
+								<p>When called on the document object, the complete document is searched, including the root node. You may also call getElementsByClassName() on any element; it will return only elements which are descendants of the specified root element with the given class name(s).</p>
+								<h3>Syntax:</h3>
+								<div>
+									<code><span class="token function">getElementsByClassName</span><span class="token punctuation">(</span>names<span class="token punctuation">)</span></code>
+								</div>
+								<h3>Example</h3>
+								<p>Get all elements that have a class of 'test':</p>
+								<div>
+									<code>document<span class="token punctuation">.</span><span class="token function"><br>getElementsByClassName</span><span class="token punctuation">(</span><span class="token string">'test'</span><span class="token punctuation">)</span></code>
+								</div>
+							</div>
+
+							<!-- ! innerHTML -->
+							<div class="inner-html">
+								<h1>Element.innerHTML</h1>
+								<p>The Element property innerHTML gets or sets the HTML or XML markup contained within the element.</p>
+								<p>To insert the HTML into the document rather than replace the contents of an element, use the method insertAdjacentHTML().</p>
+								<h3>Value</h3>
+								<p>A string containing the HTML serialization of the element's descendants. Setting the value of innerHTML removes all of the element's descendants and replaces them with nodes constructed by parsing the HTML given in the string htmlString.</p>
+							</div>
+							<!-- ! createElement -->
+							<div class="create-element">
+								<h1>Document.createElement()</h1>
+								<p>In an HTML document, the document.createElement() method creates the HTML element specified by tagName, or an HTMLUnknownElement if tagName isn't recognized.</p>
+								<h3>Syntax:</h3>
+								<div>
+									<code><span class="token function">createElement</span><span class="token punctuation">(</span>tagName<span class="token punctuation">)</span>
+<span class="token function">createElement</span><span class="token punctuation">(</span>tagName<span class="token punctuation">,</span> options<span class="token punctuation">)</span></code>
+								</div>
+							</div>
+							<!-- ! createTextNode -->
+							<div class="create-text-node">
+								<h1>Document.createTextNode()</h1>
+								<p>Creates a new Text node. This method can be used to escape HTML characters.</p>
+								<h3>Syntax:</h3>
+								<div>
+									<code><span class="token function">createTextNode</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span></code>
+								</div>
+							</div>
+							<!-- ! Element.classList.(add / remove / replace / toggle) -->
+							<div class="class-list">
+								<h1>Element.classList</h1>
+								<p>The Element.classList is a read-only property that returns a live DOMTokenList collection of the class attributes of the element. This can then be used to manipulate the class list.</p>
+								<p>Using classList is a convenient alternative to accessing an element's list of classes as a space-delimited string via element.className.</p>
+								<h3>Value</h3>
+								<p>A DOMTokenList representing the contents of the element's class attribute. If the class attribute is not set or empty, it returns an empty DOMTokenList, i.e. a DOMTokenList with the length property equal to 0.</p>
+								<p>Although the classList property itself is read-only, you can modify its associated DOMTokenList using the add(), remove(), replace(), and toggle() methods.</p>
+							</div>
+							<!-- ! insertAdjacentElement() -->
+							<div class="insert-adjacent-element">
+								<h1>.insertAdjacentElement()</h1>
+								<p>The insertAdjacentElement() method of the Element interface inserts a given element node at a given position relative to the element it is invoked upon.</p>
+								<h3>Syntax:</h3>
+								<div>
+									<code><span class="token function">insertAdjacentElement</span><span class="token punctuation">(</span><br>position<span class="token punctuation">,</span> element<span class="token punctuation">)</span></code>
+								</div>
+							</div>
+							<!-- ! .insertAdjacentHTML() -->
+							<div class="insert-adjacent-html">
+								<h1>.insertAdjacentHTML()</h1>
+								<p>The insertAdjacentHTML() method of the Element interface parses the specified text as HTML or XML and inserts the resulting nodes into the DOM tree at a specified position.</p>
+								<h3>Syntax:</h3>
+								<div>
+									<code><span class="token function">insertAdjacentHTML</span><span class="token punctuation">(</span>position<span class="token punctuation">,</span> text<span class="token punctuation">)</span></code>
+								</div>
+							</div>
+							<!-- !  -->
+							<div class="insert-adjacent-text">
+								<h1>.insertAdjacentText()</h1>
+								<p>The insertAdjacentText() method of the Element interface, given a relative position and a string, inserts a new text node at the given position relative to the element it is called from.</p>
+								<h3>Syntax:</h3>
+								<div>
+									<code><span class="token function">insertAdjacentText</span><span class="token punctuation">(</span>where<span class="token punctuation">,</span> data<span class="token punctuation">)</span></code>
+								</div>
 							</div>
 						</div>
 					</div>
