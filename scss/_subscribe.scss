@@ -20,7 +20,7 @@
 
 		input[type='email'] {
 			width: 100vw;
-			padding: 10px;
+			padding: 10px 15px;
 			border: none;
 			border-radius: 10px;
 		}
@@ -28,12 +28,39 @@
 		a {
 			border: none;
 			background: transparent;
-			margin-left: 5px;
+			margin-left: 2vw;
 
 			i {
 				color: #000;
 				font: {
 					size: 24px;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.subscribe {
+		&__body {
+			h2 {
+				font: {
+					size: 40px;
+				}
+			}
+		}
+
+		&__form {
+			margin: 25px 0;
+			input[type='email'] {
+				padding: 15px 20px;
+			}
+
+			a {
+				i {
+					font: {
+						size: 30px;
+					}
 				}
 			}
 		}

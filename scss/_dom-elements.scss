@@ -41,4 +41,38 @@
 			}
 		}
 	}
+
+	&__image {
+		display: none;
+	}
+}
+
+@media (min-width: 768px) {
+	.dom-elements {
+		&__title {
+			h2 {
+				line-height: 40px;
+				font: {
+					size: 32px;
+				}
+			}
+
+			h3 {
+				line-height: 30px;
+				font: {
+					size: 24px;
+				}
+			}
+		}
+
+		&__content {
+			display: flex;
+			align-items: flex-start;
+			justify-content: space-between;
+		}
+
+		&__image {
+			display: block;
+		}
+	}
 }

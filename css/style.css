@@ -444,8 +444,16 @@ textarea {
   padding: 0.2em 0;
 }
 
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
   background: #eee;
+  overflow-x: hidden;
 }
 
 .wrapper {
@@ -469,7 +477,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 14px 0;
+  padding: 14px 5vw;
 }
 .header__inner .logo__link {
   text-decoration: none;
@@ -481,6 +489,9 @@ body {
 }
 .header__inner .logo__link span {
   color: #46ff90;
+}
+.header__inner #clock {
+  display: none;
 }
 .header__inner .navbar:active {
   background: #95959c;
@@ -563,15 +574,15 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   position: fixed;
-  left: 1rem;
-  right: 1rem;
+  left: 5vw;
+  right: 5vw;
   bottom: 0;
   border-radius: 14px;
   background-color: #180b3c;
   z-index: 1;
   padding: 93px 20px 20px;
-  -webkit-transform: translate(0, 100vh);
-          transform: translate(0, 100vh);
+  -webkit-transform: translate(0, 200vh);
+          transform: translate(0, 200vh);
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
   -webkit-box-shadow: 0px 0px 10px 2px #180b3c;
@@ -609,6 +620,71 @@ body {
 @media (prefers-reduced-motion: no-preference) {
   :root {
     scroll-behavior: smooth;
+  }
+}
+@media (min-width: 768px) {
+  .header .header__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: normal;
+        -ms-flex-pack: normal;
+            justify-content: normal;
+    -webkit-box-align: normal;
+        -ms-flex-align: normal;
+            align-items: normal;
+    padding: 0;
+  }
+  .header .header__inner #clock {
+    display: block;
+    color: #fff;
+    line-height: 24px;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+  }
+  .header .header__inner .navbar #check-burger,
+.header .header__inner .navbar .burger,
+.header .header__inner .navbar #close-menu {
+    display: none;
+  }
+  .header .header__inner .navbar .nav {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(73, 168, 255, 0.7019607843);
+    padding: 10px 0;
+    -webkit-box-shadow: 0px 0px;
+            box-shadow: 0px 0px;
+    gap: 0;
+    position: inherit;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    border-radius: 0;
+  }
+  .header .header__inner .navbar .nav__link {
+    width: auto;
+    background: transparent;
+    margin-left: 15px;
+    font-size: 16px;
+  }
+  .header__nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 20px 0;
+    padding: 0 5vw;
   }
 }
 .about {
@@ -655,9 +731,26 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 .about__image img {
-  width: 40vw;
+  width: 130px;
 }
 
+@media (min-width: 768px) {
+  .about__title {
+    width: 45vw;
+  }
+  .about__title h1 {
+    line-height: 58px;
+    font-size: 48px;
+  }
+  .about__title h3 {
+    line-height: 24px;
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+  .about__title a {
+    padding: 20px 35px;
+  }
+}
 .methods-arrays {
   background: #383768;
 }
@@ -698,7 +791,40 @@ body {
   font-weight: 700;
   font-family: "Montserrat", sans-serif;
 }
+.methods-arrays__image {
+  display: none;
+}
 
+@media (min-width: 768px) {
+  .methods-arrays__title h2 {
+    line-height: 40px;
+    font-size: 32px;
+  }
+  .methods-arrays__title h3 {
+    line-height: 30px;
+    font-size: 24px;
+  }
+  .methods-arrays__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .methods-arrays__columns {
+    width: 35vw;
+  }
+  .methods-arrays__image {
+    display: block;
+  }
+  .methods-arrays__image img {
+    width: 350px;
+  }
+}
 .methods-objects {
   background: #180b3c;
   -webkit-box-shadow: 0px 5px 5px rgba(112, 0, 255, 0.3607843137);
@@ -734,7 +860,34 @@ body {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
 }
+.methods-objects__column_image {
+  display: none;
+}
 
+@media (min-width: 768px) {
+  .methods-objects__title h2 {
+    line-height: 40px;
+    font-size: 32px;
+  }
+  .methods-objects__title h3 {
+    line-height: 30px;
+    font-size: 24px;
+  }
+  .methods-objects__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .methods-objects__column_image {
+    display: block;
+  }
+}
 .subscribe {
   margin-top: 40px;
   background: #eee;
@@ -760,20 +913,34 @@ body {
 }
 .subscribe__form input[type=email] {
   width: 100vw;
-  padding: 10px;
+  padding: 10px 15px;
   border: none;
   border-radius: 10px;
 }
 .subscribe__form a {
   border: none;
   background: transparent;
-  margin-left: 5px;
+  margin-left: 2vw;
 }
 .subscribe__form a i {
   color: #000;
   font-size: 24px;
 }
 
+@media (min-width: 768px) {
+  .subscribe__body h2 {
+    font-size: 40px;
+  }
+  .subscribe__form {
+    margin: 25px 0;
+  }
+  .subscribe__form input[type=email] {
+    padding: 15px 20px;
+  }
+  .subscribe__form a i {
+    font-size: 30px;
+  }
+}
 .dom-elements {
   background: #00193e;
 }
@@ -806,7 +973,34 @@ body {
   font-weight: 700;
   font-family: "Montserrat", sans-serif;
 }
+.dom-elements__image {
+  display: none;
+}
 
+@media (min-width: 768px) {
+  .dom-elements__title h2 {
+    line-height: 40px;
+    font-size: 32px;
+  }
+  .dom-elements__title h3 {
+    line-height: 30px;
+    font-size: 24px;
+  }
+  .dom-elements__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .dom-elements__image {
+    display: block;
+  }
+}
 .footer {
   text-align: center;
   background: rgba(39, 0, 33, 0.9215686275);

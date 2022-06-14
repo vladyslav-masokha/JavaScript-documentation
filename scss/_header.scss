@@ -1,7 +1,14 @@
 $font-stack: 'Montserrat', sans-serif;
 
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
 body {
 	background: #eee;
+	overflow-x: hidden;
 }
 
 .wrapper {
@@ -18,7 +25,7 @@ body {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: 14px 0;
+		padding: 14px 5vw;
 
 		.logo {
 			&__link {
@@ -35,6 +42,11 @@ body {
 				}
 			}
 		}
+
+		#clock {
+			display: none;
+		}
+
 		.navbar {
 			&:active {
 				background: #95959c;
@@ -109,6 +121,7 @@ body {
 			.un-active-navbar {
 				display: none;
 			}
+
 			.nav {
 				display: flex;
 				align-items: center;
@@ -116,14 +129,14 @@ body {
 				gap: 10px;
 				flex-direction: column;
 				position: fixed;
-				left: 1rem;
-				right: 1rem;
+				left: 5vw;
+				right: 5vw;
 				bottom: 0;
 				border-radius: 14px;
 				background-color: #180b3c;
 				z-index: 1;
 				padding: 93px 20px 20px;
-				transform: translate(0, 100vh);
+				transform: translate(0, 200vh);
 				transition: all 0.3s linear;
 				box-shadow: 0px 0px 10px 2px #180b3c;
 
@@ -170,5 +183,65 @@ body {
 @media (prefers-reduced-motion: no-preference) {
 	:root {
 		scroll-behavior: smooth;
+	}
+}
+
+@media (min-width: 768px) {
+	.header {
+		.header__inner {
+			flex-direction: column;
+			justify-content: normal;
+			align-items: normal;
+			padding: 0;
+			#clock {
+				display: block;
+				color: #fff;
+				line-height: 24px;
+				font: {
+					size: 20px;
+					weight: 700;
+					family: $font-stack;
+				}
+			}
+
+			.navbar {
+				#check-burger,
+				.burger,
+				#close-menu {
+					display: none;
+				}
+
+				.nav {
+					transform: translate(0);
+					right: 0;
+					left: 0;
+					bottom: 0;
+					background: #49a8ffb3;
+					padding: 10px 0;
+					box-shadow: 0px 0px;
+					gap: 0;
+					position: inherit;
+					flex-direction: row;
+					border-radius: 0;
+
+					&__link {
+						width: auto;
+						background: transparent;
+						margin-left: 15px;
+						font: {
+							size: 16px;
+						}
+					}
+				}
+			}
+		}
+
+		&__nav {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin: 20px 0;
+			padding: 0 5vw;
+		}
 	}
 }

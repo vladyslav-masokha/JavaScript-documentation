@@ -41,5 +41,40 @@
 				weight: 700;
 			}
 		}
+		&_image {
+			display: none;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.methods-objects {
+		&__title {
+			h2 {
+				line-height: 40px;
+				font: {
+					size: 32px;
+				}
+			}
+
+			h3 {
+				line-height: 30px;
+				font: {
+					size: 24px;
+				}
+			}
+		}
+
+		&__content {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+		}
+
+		&__column {
+			&_image {
+				display: block;
+			}
+		}
 	}
 }

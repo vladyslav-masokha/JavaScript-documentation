@@ -1,5 +1,6 @@
 // Navigation
 const navEl = document.getElementsByTagName('nav');
+const bodyEl = document.querySelector('body');
 
 document.getElementById('close-menu').onclick = () => {
 	navEl[0].classList.add('un-active-navbar');
@@ -10,35 +11,13 @@ document.getElementById('check-burger').onclick = () => {
 	navEl[0].style.display = 'flex';
 };
 
-// ! Scroll - TODO: not working
-// const anchors = document.querySelectorAll('a[href="#"');
-
-// for (let anchor of anchors) {
-// 	anchor.addEventListener('click', e => {
-// 		e.preventDefault();
-// 		const blockID = anchor.getAttribute('href');
-// 		document.querySelector('' + blockID).scrollIntoView({
-// 			behavior: 'smooth',
-// 			block: 'start',
-// 		});
-// 	});
-// }
-
-// document.querySelectorAll('a[href="#"').forEach(link => {
-// 	link.addEventListener('click', function (e) {
-// 		e.preventDefault();
-
-// 		let href = this.getAttribute('href');
-
-// 		const scrollTarget = document.getElementById(href);
-
-// 		const topOfSet = document.querySelector('.header').offsetHeight;
-// 		const elementPosition = scrollTarget.getBoundingClientRect().top;
-// 		const offsetPosition = elementPosition - topOfSet;
-
-// 		window.scrollBy({
-// 			top: offsetPosition,
-// 			behavior: 'smooth',
-// 		});
-// 	});
-// });
+// Clock
+function myClock() {
+	setTimeout(function () {
+		const d = new Date();
+		const n = d.toLocaleTimeString();
+		document.getElementById('clock').innerHTML = n;
+		myClock();
+	}, 1000);
+}
+myClock();

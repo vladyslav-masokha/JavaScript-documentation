@@ -26,32 +26,36 @@
 		<div id="page">
 			<!-- ? Header -->
 			<div class="header">
-				<div class="wrapper">
-					<div class="header__inner">
+				<div class="header__inner">
+					<div class="header__nav">
 						<!-- ? Logo -->
 						<div class="logo">
 							<a href="./index.html" class="logo__link"
 								>JavaScript <span>(doc)</span></a
 							>
 						</div>
-						<!-- ? Navigation -->
-						<div class="navbar">
-							<input type="checkbox" id="check-burger" />
-							<p class="burger">
-								<span></span>
-								<span></span>
-								<span></span>
-								<span></span>
-							</p>
-							<nav class="nav">
-								<span id="close-menu">&times;</span>
-								<a href="#about" class="nav__link">Home</a>
-								<a href="#methods-arrays" class="nav__link">Methods arrays</a>
-								<a href="#methods-objects" class="nav__link">Methods objects</a>
-								<a href="#dom-elements" class="nav__link">DOM elements</a>
-								<a href="#" class="nav__link">JavaScript <span>(know)</span></a>
-							</nav>
-						</div>
+
+						<!-- ? Clock -->
+						<span id="clock"></span>
+					</div>
+
+					<!-- ? Navigation -->
+					<div class="navbar">
+						<input type="checkbox" id="check-burger" />
+						<p class="burger">
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+						</p>
+						<nav class="nav">
+							<span id="close-menu">&times;</span>
+							<a href="#about" class="nav__link">Home</a>
+							<a href="#methods-arrays" class="nav__link">Methods arrays</a>
+							<a href="#methods-objects" class="nav__link">Methods objects</a>
+							<a href="#dom-elements" class="nav__link">DOM elements</a>
+							<a href="#" class="nav__link">JavaScript <span>(know)</span></a>
+						</nav>
 					</div>
 				</div>
 			</div>
@@ -80,41 +84,46 @@
 							<h2>Methods array</h2>
 							<h3>All methods for arrays:</h3>
 						</div>
-						<div class="methods-arrays__columns">
-							<ul>
-								<li>.concat()</li>
-								<li>.copyWithin()</li>
-								<li>.entries()</li>
-								<li>.every()</li>
-								<li>.fill()</li>
-								<li>.filter()</li>
-								<li>.find()</li>
-								<li>.findIndex()</li>
-								<li>.forEach()</li>
-								<li>.from()</li>
-								<li>.includes()</li>
-								<li>.indexOf()</li>
-								<li>.isArray()</li>
-								<li>.join()</li>
-								<li>.keys()</li>
-							</ul>
-							<ul>
-								<li>.lastIndexOf()</li>
-								<li>.map()</li>
-								<li>.pop()</li>
-								<li>.push()</li>
-								<li>.reduce()</li>
-								<li>.reduceRight()</li>
-								<li>.reverse()</li>
-								<li>.shift()</li>
-								<li>.slice()</li>
-								<li>.some()</li>
-								<li>.sort()</li>
-								<li>.splice()</li>
-								<li>.toString()</li>
-								<li>.unshift()</li>
-								<li>.valueOf()</li>
-							</ul>
+						<div class="methods-arrays__content">
+							<div class="methods-arrays__columns">
+								<ul>
+									<li>.concat()</li>
+									<li>.copyWithin()</li>
+									<li>.entries()</li>
+									<li>.every()</li>
+									<li>.fill()</li>
+									<li>.filter()</li>
+									<li>.find()</li>
+									<li>.findIndex()</li>
+									<li>.forEach()</li>
+									<li>.from()</li>
+									<li>.includes()</li>
+									<li>.indexOf()</li>
+									<li>.isArray()</li>
+									<li>.join()</li>
+									<li>.keys()</li>
+								</ul>
+								<ul>
+									<li>.lastIndexOf()</li>
+									<li>.map()</li>
+									<li>.pop()</li>
+									<li>.push()</li>
+									<li>.reduce()</li>
+									<li>.reduceRight()</li>
+									<li>.reverse()</li>
+									<li>.shift()</li>
+									<li>.slice()</li>
+									<li>.some()</li>
+									<li>.sort()</li>
+									<li>.splice()</li>
+									<li>.toString()</li>
+									<li>.unshift()</li>
+									<li>.valueOf()</li>
+								</ul>
+							</div>
+							<div class="methods-arrays__image">
+								<img src="./image/methods-arrays.jpg" alt="arrays" />
+							</div>
 						</div>
 					</div>
 				</div>
@@ -128,16 +137,21 @@
 							<h2>Methods objects</h2>
 							<h3>All methods for arrays:</h3>
 						</div>
-						<div class="methods-objects__column">
-							<ul>
-								<li>Shallow copy — Object.assign()</li>
-								<li>Deep copy — JSON.parse() & JSON.stringify()</li>
-								<li>Object.create()</li>
-								<li>Object.entries()</li>
-								<li>Object.keys()</li>
-								<li>Object.values()</li>
-								<li>Object.freeze()</li>
-							</ul>
+						<div class="methods-objects__content">
+							<div class="methods-objects__column">
+								<ul>
+									<li>Shallow copy — Object.assign()</li>
+									<li>Deep copy — JSON.parse() & JSON.stringify()</li>
+									<li>Object.create()</li>
+									<li>Object.entries()</li>
+									<li>Object.keys()</li>
+									<li>Object.values()</li>
+									<li>Object.freeze()</li>
+								</ul>
+							</div>
+							<div class="methods-objects__column_image">
+								<img src="./image/Methods objects.jpg" alt="objects" />
+							</div>
 						</div>
 					</div>
 				</div>
@@ -163,29 +177,34 @@
 				<div class="wrapper">
 					<div class="dom-elements__body">
 						<div class="dom-elements__title">
-							<h2>DOM elements</h2>
-							<h3>~ All Dom elements:</h3>
+							<h2>Interactions with DOM</h2>
+							<h3>~ All interactions with DOM:</h3>
 						</div>
-						<div class="dom-elements__column">
-							<ul>
-								<li>.createElement()</li>
-								<li>.createTextNode()</li>
-								<li>.getElementById()</li>
-								<li>.append()</li>
-								<li>.prepend()</li>
-								<li>.classList.add()</li>
-								<li>.classList.remove()</li>
-								<li>.getElementsByTagName()</li>
-								<li>.getElementsByClassName()</li>
-								<li>.querySelector()</li>
-								<li>.querySelectorAll()</li>
-								<li>.className</li>
-								<li>.innerHTML</li>
-								<li>.outerHTML</li>
-								<li>.insertAdjacentElement()</li>
-								<li>.insertAdjacentHTML()</li>
-								<li>.insertAdjacentText()</li>
-							</ul>
+						<div class="dom-elements__content">
+							<div class="dom-elements__column">
+								<ul>
+									<li>.createElement()</li>
+									<li>.createTextNode()</li>
+									<li>.getElementById()</li>
+									<li>.append()</li>
+									<li>.prepend()</li>
+									<li>.classList.add()</li>
+									<li>.classList.remove()</li>
+									<li>.getElementsByTagName()</li>
+									<li>.getElementsByClassName()</li>
+									<li>.querySelector()</li>
+									<li>.querySelectorAll()</li>
+									<li>.className</li>
+									<li>.innerHTML</li>
+									<li>.outerHTML</li>
+									<li>.insertAdjacentElement()</li>
+									<li>.insertAdjacentHTML()</li>
+									<li>.insertAdjacentText()</li>
+								</ul>
+							</div>
+							<div class="dom-elements__image">
+								<img src="./image/dom-class-hierarchy.svg" alt="dom">
+							</div>
 						</div>
 					</div>
 				</div>
