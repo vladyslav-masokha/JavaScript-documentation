@@ -606,6 +606,11 @@ body {
   color: #46ff90;
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
 .about {
   padding: 35vh 0 30vh 0;
   background: #aa85ee;
