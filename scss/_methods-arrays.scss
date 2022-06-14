@@ -1,0 +1,46 @@
+.methods-arrays {
+	background: #383768;
+
+	&__body {
+		padding: 30px 0;
+	}
+
+	&__title {
+		h2 {
+			color: #ff5b5b;
+			line-height: 29px;
+			text-align: center;
+			font: {
+				size: 24px;
+				weight: 700;
+				family: $font-stack;
+			}
+		}
+		h3 {
+			color: #5061ff;
+			margin-top: 15px;
+			font: {
+				size: 16px;
+				weight: 700;
+				family: $font-stack;
+			}
+		}
+	}
+
+	&__columns {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: 10px;
+
+		li {
+			color: #5dcabd;
+			line-height: 20px;
+			font: {
+				size: 16px;
+				weight: 700;
+				family: $font-stack;
+			}
+		}
+	}
+}
