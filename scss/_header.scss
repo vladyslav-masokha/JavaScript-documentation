@@ -248,8 +248,30 @@ body {
 
 @media (min-width: 1024px) {
 	.header {
-		.nav__link {
-			margin-left: 30px;
+		.header__inner {
+			.navbar {
+				.nav__link {
+					margin-left: 30px;
+					border-radius: 0;
+
+					&:active,
+					&:hover {
+						color: #ff5555;
+						transition: all 0.5s ease;
+						border-bottom: 2px solid #ff5555;
+
+						padding-bottom: 4px;
+					}
+
+					&-active {
+						color: #ff5555;
+						transition: all 0.5s ease;
+						border-bottom: 2px solid #ff5555;
+						border-radius: 0;
+						padding-bottom: 4px;
+					}
+				}
+			}
 		}
 	}
 }

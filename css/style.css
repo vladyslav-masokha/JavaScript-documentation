@@ -688,8 +688,24 @@ body {
   }
 }
 @media (min-width: 1024px) {
-  .header .nav__link {
+  .header .header__inner .navbar .nav__link {
     margin-left: 30px;
+    border-radius: 0;
+  }
+  .header .header__inner .navbar .nav__link:active, .header .header__inner .navbar .nav__link:hover {
+    color: #ff5555;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    border-bottom: 2px solid #ff5555;
+    padding-bottom: 4px;
+  }
+  .header .header__inner .navbar .nav__link-active {
+    color: #ff5555;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    border-bottom: 2px solid #ff5555;
+    border-radius: 0;
+    padding-bottom: 4px;
   }
 }
 .about {
@@ -754,6 +770,23 @@ body {
   }
   .about__title a {
     padding: 20px 35px;
+  }
+}
+@media (min-width: 1024px) {
+  .about__title h1 {
+    line-height: 78px;
+    font-size: 64px;
+  }
+  .about__title h3 {
+    margin: 15px 0 35px 0;
+    line-height: 30px;
+    font-size: 24px;
+  }
+  .about__title a {
+    padding: 20px 40px;
+  }
+  .about__image img {
+    width: 250px;
   }
 }
 .methods-arrays {
@@ -830,6 +863,19 @@ body {
     width: 350px;
   }
 }
+@media (min-width: 1024px) {
+  .methods-arrays__body {
+    padding: 40px 0;
+  }
+  .methods-arrays__title h2 {
+    line-height: 50px;
+    font-size: 40px;
+  }
+  .methods-arrays__columns li {
+    line-height: 24px;
+    font-size: 20px;
+  }
+}
 .methods-objects {
   background: #180b3c;
   -webkit-box-shadow: 0px 5px 5px rgba(112, 0, 255, 0.3607843137);
@@ -893,6 +939,19 @@ body {
     display: block;
   }
 }
+@media (min-width: 1024px) {
+  .methods-objects__body {
+    padding: 40px 0;
+  }
+  .methods-objects__title h2 {
+    line-height: 50px;
+    font-size: 40px;
+  }
+  .methods-objects__column li {
+    line-height: 25px;
+    font-size: 20px;
+  }
+}
 .subscribe {
   margin-top: 40px;
   background: #eee;
@@ -944,6 +1003,14 @@ body {
   }
   .subscribe__form a i {
     font-size: 30px;
+  }
+}
+@media (min-width: 1024px) {
+  .subscribe {
+    margin-top: 45px;
+  }
+  .subscribe__body {
+    padding: 25px 0;
   }
 }
 .dom-elements {
@@ -1004,6 +1071,19 @@ body {
   }
   .dom-elements__image {
     display: block;
+  }
+}
+@media (min-width: 1024px) {
+  .dom-elements__body {
+    padding: 40px 0;
+  }
+  .dom-elements__title h2 {
+    line-height: 50px;
+    font-size: 40px;
+  }
+  .dom-elements__column li {
+    line-height: 25px;
+    font-size: 20px;
   }
 }
 .footer {

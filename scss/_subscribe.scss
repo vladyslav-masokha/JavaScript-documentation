@@ -66,3 +66,13 @@
 		}
 	}
 }
+
+@media (min-width: 1024px) {
+	.subscribe {
+		margin-top: 45px;
+
+		&__body {
+			padding: 25px 0;
+		}
+	}
+}

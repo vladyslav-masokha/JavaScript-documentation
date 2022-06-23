@@ -85,3 +85,29 @@
 		}
 	}
 }
+
+@media (min-width: 1024px) {
+	.methods-arrays {
+		&__body {
+			padding: 40px 0;
+		}
+
+		&__title {
+			h2 {
+				line-height: 50px;
+				font: {
+					size: 40px;
+				}
+			}
+		}
+
+		&__columns {
+			li {
+				line-height: 24px;
+				font: {
+					size: 20px;
+				}
+			}
+		}
+	}
+}

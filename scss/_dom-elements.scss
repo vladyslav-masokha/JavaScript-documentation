@@ -76,3 +76,29 @@
 		}
 	}
 }
+
+@media (min-width: 1024px) {
+	.dom-elements {
+		&__body {
+			padding: 40px 0;
+		}
+
+		&__title {
+			h2 {
+				line-height: 50px;
+				font: {
+					size: 40px;
+				}
+			}
+		}
+
+		&__column {
+			li {
+				line-height: 25px;
+				font: {
+					size: 20px;
+				}
+			}
+		}
+	}
+}
