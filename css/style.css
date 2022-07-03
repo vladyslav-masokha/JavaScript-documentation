@@ -129,7 +129,7 @@ body.active {
 @media (max-width: 1024px) {
   .header #local-clock {
     display: block;
-    color: var(--color-text);
+    color: var(--color-doc-text);
     font-size: 32px;
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
@@ -485,9 +485,9 @@ body.active {
 }
 .documentation__title h2 {
   color: #ff5b5b;
-  line-height: 40px;
+  line-height: 30px;
   text-align: center;
-  font-size: 50px;
+  font-size: 32px;
   font-weight: 700;
   font-family: "Montserrat", sans-serif;
 }
