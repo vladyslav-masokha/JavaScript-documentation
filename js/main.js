@@ -1,23 +1,38 @@
-// Navigation
-const navEl = document.getElementsByTagName('nav');
-const bodyEl = document.querySelector('body');
+const changeThemeBtn = document.querySelector('.change-theme');
 
-document.getElementById('close-menu').onclick = () => {
-	navEl[0].classList.add('un-active-navbar');
-	navEl[0].style.display = 'none';
-};
-document.getElementById('check-burger').onclick = () => {
-	navEl[0].classList.remove('un-active-navbar');
-	navEl[0].style.display = 'flex';
-};
-
-// Clock
-function myClock() {
-	setTimeout(function () {
-		const d = new Date();
-		const n = d.toLocaleTimeString();
-		document.getElementById('clock').innerHTML = n;
-		myClock();
-	}, 1000);
+function lightTheme() {
+	document.body.classList.remove('active');
+	changeThemeBtn.setAttribute('class', 'fa-solid fa-moon change-theme');
+	localStorage.theme = 'light';
 }
-myClock();
+
+function darkTheme() {
+	document.body.classList.add('active');
+	changeThemeBtn.setAttribute('class', 'fa-solid fa-sun change-theme');
+	localStorage.theme = 'dark';
+}
+
+const changeTheme = () => {
+	if (document.body.classList.contains('active')) {
+		lightTheme();
+	} else {
+		darkTheme();
+	}
+};
+changeThemeBtn.addEventListener('click', changeTheme);
+
+if (localStorage.getItem('theme') === 'dark') {
+	darkTheme();
+} else if (localStorage.getItem('theme') === 'light') {
+	lightTheme();
+}
+
+const localTime = () => {
+	setTimeout(() => {
+		const newDate = new Date();
+		const getLocalTime = newDate.toLocaleTimeString();
+		document.getElementById('local-clock').innerText = getLocalTime;
+		localTime();
+	}, 1000);
+};
+localTime();
