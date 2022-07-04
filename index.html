@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>03.07.2022</title>
+	<title>JavaScript documentation | New project/new design</title>
 	<!-- TODO: Icons Font awesome-->
 	<script src="https://kit.fontawesome.com/26827a1d02.js" crossorigin="anonymous"></script>
 
@@ -22,7 +22,7 @@
 	<!-- TODO: Favicon -->
 	<link rel="shortcut icon" href="./image/favicon.ico" type="image/x-icon">
 </head>
-<body>
+<body class="dark">
 
 	<div id="page">
 
@@ -31,225 +31,120 @@
 			<div class="wrapper">
 				<div class="header__body">
 
-						<!-- Logo -->
-						<div class="logo">
-							<a href="./index.html" class="logo__link">JavaScript</a>
-						</div>
-					
-						<nav>
-							<input type="checkbox" id="click">
-							<label for="click" class="menu-btn">
-								<i class="fas fa-bars"></i>
-							</label>
-
-							<!-- Navigation -->
-							<ul>
-								<li><a href="#about" class="header__nav-link">Головна</a></li>
-								<li><a href="#methods-arrays" class="header__nav-link">Масиви</a></li>
-								<li><a href="#methods-objects" class="header__nav-link">Об'єкти</a></li>
-								<li><a href="#dom-elements" class="header__nav-link">Взаємодія з DOM</a></li>
-								<li><a href="#documentation" class="header__nav-link">Документація</a></li>
-								<li class="theme">
-									<i class="fa-solid fa-moon change-theme"></i>
-								</li>
-								<span id="local-clock"></span>
-							</ul>
-						</nav>
-						
+					<div class="clock-and-date">
+						<span id="local-time"></span>
+						<span id="local-date"></span>
 					</div>
 					
+					<div class="header__row">
+						<div class="header__logo">
+							<a href="./index.html" class="header__logo_link">
+								JavaScript
+								<span>(doc)</span>
+							</a>
+						</div>
+						<nav class="header__nav">
+							<li><a href="#about" class="header__nav_link">Головна</a></li>
+							<li><a href="#methods-array" class="header__nav_link">Масиви</a></li>
+							<li><a href="#methods-object" class="header__nav_link">Об'єкти</a></li>
+							<li><a href="#interacting-with-dom" class="header__nav_link">Взаємодія з DOM</a></li>
+							<li><a href="#documentation" class="header__nav_link">Документація</a></li>
+							<li class="theme">
+								<i class="fa-solid fa-moon" data-theme></i>
+							</li>
+							<li><span id="time"></span></li>
+						</nav>
+						<button class="burger">
+							<span class="burger__line"></span>
+						</button>
+					</div>
+				</div>
 			</div>
 		</header>
-
-		<!-- ? About -->
+	
+		<!-- TODO: About -->
 		<div class="about" id="about">
 			<div class="wrapper">
 				<div class="about__body">
 					<div class="about__title">
 						<h1>Що є в JavaScript?</h1>
 						<h3>В JavaScript є методи, об'єкти, функції та багато іншого...</h3>
-						<a href="#methods-arrays">Більше деталей</a>
-					</div>
-					<div class="about__image">
-						<img src="./image/javascript.png" alt="JavaScript" />
+						<a href="#methods-array">Більше деталей</a>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<!-- ? Methods arrays-->
-		<div class="methods-arrays" id="methods-arrays">
+		<!-- TODO: Methods array -->
+		<div class="methods-array" id="methods-array">
 			<div class="wrapper">
-				<div class="methods-arrays__body">
-					<div class="methods-arrays__title">
-						<h2>Методи масива</h2>
-						<h3>Приблизно всі методи масива:</h3>
-					</div>
-					<div class="methods-arrays__content">
-						<div class="methods-arrays__columns">
-							<ul>
-								<li>.concat()</li>
-								<li>.copyWithin()</li>
-								<li>.entries()</li>
-								<li>.every()</li>
-								<li>.fill()</li>
-								<li>.filter()</li>
-								<li>.find()</li>
-								<li>.findIndex()</li>
-								<li>.forEach()</li>
-								<li>.from()</li>
-								<li>.includes()</li>
-								<li>.indexOf()</li>
-								<li>.isArray()</li>
-								<li>.join()</li>
-								<li>.keys()</li>
-							</ul>
-							<ul>
-								<li>.lastIndexOf()</li>
-								<li>.map()</li>
-								<li>.pop()</li>
-								<li>.push()</li>
-								<li>.reduce()</li>
-								<li>.reduceRight()</li>
-								<li>.reverse()</li>
-								<li>.shift()</li>
-								<li>.slice()</li>
-								<li>.some()</li>
-								<li>.sort()</li>
-								<li>.splice()</li>
-								<li>.toString()</li>
-								<li>.unshift()</li>
-								<li>.valueOf()</li>
-							</ul>
-						</div>
-						<div class="methods-arrays__image">
-							<img src="./image/methods-arrays.jpg" alt="arrays" />
-						</div>
-					</div>
+				<div class="methods-array__body">
+						<h2 class="methods-array__title">Методи масива</h2>
+						<hr>
+						<ul class="methods-array__content"></ul>
 				</div>
 			</div>
 		</div>
 
-		<!-- ? Methods objects -->
-		<div class="methods-objects" id="methods-objects">
+		<!-- TODO: Methods object -->
+		<div class="methods-object" id="methods-object">
 			<div class="wrapper">
-				<div class="methods-objects__body">
-					<div class="methods-objects__title">
-						<h2>Методи об'єктів</h2>
-						<h3>Приблизно всі методи об'єктів:</h3>
-					</div>
-					<div class="methods-objects__content">
-						<div class="methods-objects__column">
-							<ul>
-								<li>Shallow copy — Object.assign()</li>
-								<li>Deep copy — JSON.parse() & JSON.stringify()</li>
-								<li>Object.create()</li>
-								<li>Object.entries()</li>
-								<li>Object.keys()</li>
-								<li>Object.values()</li>
-								<li>Object.freeze()</li>
-							</ul>
-						</div>
-						<div class="methods-objects__column_image">
-							<img src="./image/Methods objects.jpg" alt="objects" />
-						</div>
-					</div>
+				<div class="methods-object__body">
+					<h2 class="methods-object__title">Методи об'єктів</h2>
+					<hr>
+					<ul class="methods-object__content"></ul>
 				</div>
 			</div>
 		</div>
 
-		<!-- ? DOM elements -->
-		<div class="dom-elements" id="dom-elements">
+		<!-- TODO: Methods object -->
+		<div class="interacting-with-dom" id="interacting-with-dom">
 			<div class="wrapper">
-				<div class="dom-elements__body">
-					<div class="dom-elements__title">
-						<h2>Взаємодія з DOM</h2>
-						<h3>Приблизно всі взаємодії з DOM:</h3>
-					</div>
-					<div class="dom-elements__content">
-						<div class="dom-elements__column">
-							<ul>
-								<li>.createElement()</li>
-								<li>.createTextNode()</li>
-								<li>.getElementById()</li>
-								<li>.append()</li>
-								<li>.prepend()</li>
-								<li>.classList.add()</li>
-								<li>.classList.remove()</li>
-								<li>.getElementsByTagName()</li>
-								<li>.getElementsByClassName()</li>
-								<li>.querySelector()</li>
-								<li>.querySelectorAll()</li>
-								<li>.className</li>
-								<li>.innerHTML</li>
-								<li>.outerHTML</li>
-								<li>.insertAdjacentElement()</li>
-								<li>.insertAdjacentHTML()</li>
-								<li>.insertAdjacentText()</li>
-								<li>.stopPropagation()</li>
-								<li>.stopImmediatePropagation()</li>
-							</ul>
-						</div>
-						<div class="dom-elements__image">
-							<img src="./image/dom-class-hierarchy.svg" alt="dom" />
-						</div>
-					</div>
+				<div class="interacting-with-dom__body">
+					<h2 class="interacting-with-dom__title">Взаємодія з DOM</h2>
+					<hr>
+					<ul class="interacting-with-dom__content"></ul>
 				</div>
 			</div>
 		</div>
 
+		<!-- TODO: Methods object -->
 		<div class="documentation" id="documentation">
 			<div class="wrapper">
 				<div class="documentation__body">
-					<div class="documentation__title">
-						<h2>Документація</h2>
-						<h3>Значення елементів:</h3>
-					</div>
-
-					<div class="documentation__content">
-						<p>
-						<span class="d-name">Рекурсія -</span>
-						це коли функція у своєму тілі викликає саму себе. Функцію, що викликає сама себе, називають <span>рекурсивною
-						функцією</span>. Виклик рекурсивної функції називається <span>рекурсивним викликом</span>.
-					</p>
-
-					<p>
-						<span class="d-name">Делегування подій -</span>
-						корисний шаблон, тому що дозволяє відстежувати події на безлічі елементів за допомогою лише одного обробника.
-						<br>
-						<span>Для роботи делегування подій потрібно 3 кроки:</span>
-						<br>
-						<mark>Визначити батька елементів для відстеження подій.</mark>
-						<br>
-						<mark>Прикріпити на нього обробник подій.</mark>
-						<br>
-						<mark>Використовувати <u>event.target</u> для вибору цільового елемента.</mark>
-					</p>
-
-					<p>
-						<span class="d-name">DOM <span>(Document Object Model)</span> -</span>
-						це об'єктна модель документа, яку браузер створює в пам'яті комп'ютер на основі HTML-кода отриманого їм від сервера.
-					</p>
-
-					<p>
-						<span class="d-name">Функція -</span>
-						це об'єкт, що самовикликається.
-					</p>
-					</div>
+					<h2 class="documentation__title">Документація</h2>
+					<hr>
+					<ul class="documentation__content"></ul>
 				</div>
 			</div>
 		</div>
 
-		<!-- ? Footer -->
 		<footer class="footer">
 			<div class="wrapper">
-				<div class="footer__copyright">
-					<span>&copy;2022. Vladyslav Masokha</span>
-					<p>Content by MDN</p>
+				<div class="footer__body">
+					<span class="copyright">
+						<span>©2022. Vladyslav Masokha</span>
+						<p>Content by MDN</p>
+					</span>
+					<span class="local-date">
+						Сьогоднішня дата:
+						<span id="date"></span>
+					</span>
 				</div>
 			</div>
 		</footer>
 	</div>
+
+	<script type="text/template" id="li-item-template">
+		<li>{{name}}</li>
+	</script>
+
+	<script type="text/template" id="doc-item-template">
+			<p>
+				<span>{{name}}</span>
+				{{text}}
+			</p>
+		</script>
 
 </body>
 </html>

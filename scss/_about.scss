@@ -1,86 +1,56 @@
+// About
 .about {
-  padding: 35vh 0 30vh 0;
-  background: var(--background-about);
+  background: url("../image/about-bg.jpeg") no-repeat center;
+  background-size: cover;
+  width: 100%;
+  margin-top: 109px;
 
+  // About body
   &__body {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 5px 0 30px;
+    margin: 200px 0;
+    padding: 0 15px;
   }
 
+  // Title
   &__title {
-    width: 55vw;
+    max-width: 290px;
 
+    // Title
     h1 {
-      color: #fff;
+      color: var(--main-text);
 
       font: {
-        size: 32px;
-        weight: 700;
+        size: 42px;
         family: $font-stack;
+        weight: 700;
       }
     }
 
+    // Subtitle
     h3 {
-      margin: 10px 0 25px 0;
-      color: var(--color-about-text);
+      color: var(--color-light-green);
+      margin: 0 0 20px 0;
 
       font: {
-        size: 16px;
-        weight: 700;
+        size: 18px;
         family: $font-stack;
+        weight: 700;
       }
     }
 
+    // Button
     a {
-      color: #58c3ff;
-      text-decoration: none;
-      background: #00000075;
-      border-radius: 10px 10px 0px 10px;
-      box-shadow: 5px 5px 0px #98a2ff80;
-      padding: 15px;
+      margin-top: 40px;
+      padding: 10px 15px;
+      color: var(--color-yellow);
+      background: var(--color-light-blue);
+      box-shadow: 7px 7px 0 0 #eee;
+      border-radius: 0 10px 0px 10px;
 
       font: {
+        family: $font-stack;
         size: 16px;
         weight: 700;
-        family: $font-stack;
-      }
-    }
-  }
-
-  &__image {
-    img {
-      width: 130px;
-    }
-  }
-}
-
-@media (min-width: 768px) {
-  .about {
-    &__title {
-      width: 45vw;
-
-      h1 {
-        line-height: 58px;
-
-        font: {
-          size: 48px;
-        }
-      }
-
-      h3 {
-        line-height: 24px;
-
-        font: {
-          size: 22px;
-        }
-
-        margin-bottom: 30px;
-      }
-
-      a {
-        padding: 20px 35px;
       }
     }
   }
@@ -88,32 +58,15 @@
 
 @media (min-width: 1024px) {
   .about {
-    &__title {
-      h1 {
-        line-height: 78px;
-
-        font: {
-          size: 64px;
-        }
-      }
-
-      h3 {
-        margin: 15px 0 35px 0;
-        line-height: 30px;
-
-        font: {
-          size: 24px;
-        }
-      }
-
-      a {
-        padding: 20px 40px;
-      }
+    &__body {
+      padding: 30px;
     }
 
-    &__image {
-      img {
-        width: 250px;
+    &__title {
+      h1 {
+        font: {
+          size: 62px;
+        }
       }
     }
   }
